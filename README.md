@@ -1,7 +1,7 @@
 # Youtube note extension
 1. Install all dependencies in command  
 ``` npm i ```  
-2. In src/store/auth-slice.js, change FIREBASE_PRJ_API to your [firebase](https://firebase.google.com/) api  
+2. In src/store/auth-slice.js, change FIREBASE_PRJ_ID to your [firebase](https://firebase.google.com/) api  
 ``` 
     ...  
     	if (inputType === 'LOGIN') {  
