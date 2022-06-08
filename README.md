@@ -3,18 +3,15 @@
 `` npm i ``  
 2. In src/store/auth-slice.js, change FIREBASE_PRJ_API to your [firebase](https://firebase.google.com/) api  
 `` 
-    ...
-    if (inputType === 'LOGIN') {
-			url =
-				'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={FIREBASE_PRJ_ID}';
-		} else if (inputType === 'SIGNUP') {
-			url =
-				'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={FIREBASE_PRJ_ID}';
-		} else if (inputType === 'FIND') {
-			url =
-				'https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key={FIREBASE_PRJ_ID}';
-		} 
-    ...
+    ...  
+    	if (inputType === 'LOGIN') {  
+		url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key={FIREBASE_PRJ_ID}';  
+	} else if (inputType === 'SIGNUP') {  
+		url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={FIREBASE_PRJ_ID}';  
+	} else if (inputType === 'FIND') {  
+		url = 'https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key={FIREBASE_PRJ_ID}';  
+	}  
+    ...  
 ``  
 3. Run npm build in command to produce build folder  
 `` npm run build ``  
