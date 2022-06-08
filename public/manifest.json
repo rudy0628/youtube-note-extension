@@ -1,25 +1,18 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"name": "Youtube-note",
+	"description": "A note can add on youtube page",
+	"version": "1.1",
+	"manifest_version": 3,
+	"permissions": ["activeTab", "scripting"],
+	"action": {
+		"default_icon": "icon-48.png",
+		"default_popup": "index.html",
+		"default_title": "Youtube-note"
+	},
+	"icons": {
+		"16": "icon-16.png",
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+	"host_permissions": ["https://www.youtube.com/"]
 }

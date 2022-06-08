@@ -1,17 +1,28 @@
+/*global chrome*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import store from './store/index';
+
+chrome.tabs.query({ active: true }, function (tabs) {
+	const tab = tabs[0];
+
+	if (tab.url.includes('https://www.youtube.com/watch?v')) {
+		// when tab open, video click(pause)
+		chrome.scripting.executeScript({
+			target: { tabId: tab.id },
+			func: () => {
+				document.querySelector('#movie_player').click();
+			},
+		});
+	}
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -1,0 +1,27 @@
+.main {
+	width: 35rem;
+	padding: 3rem 2rem 4rem;
+	max-height: 25rem;
+	overflow-y: scroll;
+}
+
+/* width */
+.main::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+.main::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+.main::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 150px;
+}
+
+/* Handle on hover */
+.main::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
